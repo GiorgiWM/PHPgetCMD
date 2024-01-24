@@ -1,0 +1,12 @@
+# Here's a Python snippet that uses pickletools to safely disassemble the pickle data:
+import pickletools
+import base64
+
+# The base64 encoded data you received
+encoded_data = 'gANYCwAAAFRyeSBIYXJkZXIhcQAu'
+
+# Decode the base64 encoded data
+decoded_data = base64.b64decode(encoded_data)
+
+# Disassemble the decoded data
+pickletools.dis(decoded_data)
